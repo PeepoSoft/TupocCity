@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://n8kng880m342"]
+
+[ext_resource type="Texture2D" uid="uid://cmsjt7x8hic8x" path="res://art/InventoryRect.png" id="1_nnqo6"]
+[ext_resource type="PackedScene" uid="uid://bvyufeov6mm3y" path="res://GUIs/slot.tscn" id="2_avci8"]
+
+[node name="Items" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 74.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+offset_right = 1138.0
+offset_bottom = 64.0
+texture = ExtResource("1_nnqo6")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+custom_minimum_size = Vector2(2.08165e-12, 11)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 219.0
+offset_bottom = 38.0
+grow_vertical = 2
+
+[node name="Slot3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_avci8")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_avci8")]
+layout_mode = 2
+
+[node name="Slot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_avci8")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_avci8")]
+layout_mode = 2
